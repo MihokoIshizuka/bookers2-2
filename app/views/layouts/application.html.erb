@@ -73,6 +73,22 @@
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
       <%= yield %>
+      <span id="back">
+        <a href="#">
+          <img src="assets/images/arrow.png" alt="">
+        </a>
+      </span>
+      <script>
+        $(function() {
+          $('#back a').on('click',function(event){
+            $('body, html').animate({
+              scrollTop:0
+            }, 800);
+            event.preventDefault();
+          });
+        });
+      </script>
     </main>
+
   </body>
 </html>
